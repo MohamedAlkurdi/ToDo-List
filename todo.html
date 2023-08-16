@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./todo.css">
+    <title>Task List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ToDo List </h1>
+        </div>
+        <div class="list">
+            <div style="background-color: rgba(240, 234, 128, 0.5);" class="task">
+                <div class="task-title">
+                <p>Example Task "title will be here"</p>
+                <ul>
+                    <li style="background-color: gray;"><i class="fa-solid fa-check"></i></li>
+                    <li style="background-color: rgb(154 77 226);" ><i class="fa-solid fa-pen"></i></li>
+                    <li style="background-color: rgb(216 60 60);"><i class="fa-solid fa-trash"></i></li>
+                </ul>
+                </div>
+                <div class="task-details">
+                    <div class="details"><i class="fa-solid fa-angle-down"></i><p>details</p></div>
+                    <p class="details-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, repudiandae. Laboriosam alias quis corrupti magni modi a repudiandae rem vel perspiciatis neque aliquam possimus, omnis esse debitis fuga nulla similique.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="plusBtn">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="none input-board">
+            <form >
+                <input id="title-input" placeholder="task title..." type="text">
+                <textarea maxlength="100" id="details-input" placeholder="details, max 100 character..." cols="10" rows="5"></textarea>
+                <button id="addBtn">add</button>
+            </form>
+        </div>
+        <div class="none edit-board">
+            <form >
+                <input id="title-edit" placeholder="New title..." type="text">
+                <textarea maxlength="100" id="details-edit" placeholder="New details, max 100 character..." cols="10" rows="5"></textarea>
+                <button id="editBoradBtn">edit</button>
+            </form>
+        </div>
+        <div class="stats">
+            <div class="stat" id="allTasksNumber">All tasks <span class="numberContainer"></span></div>
+            <div class="stat" id="finishedTasksNumber">Complete tasks<span class="numberContainer"></span></div>
+            <div class="stat" id="unFinishedTasksNumber">Incomplete tasks<span class="numberContainer"></span></div>
+        </div>
+    </div>
+</body>
+<script src="./todo.js"></script>
+</html>

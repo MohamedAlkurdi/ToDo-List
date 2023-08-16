@@ -1,0 +1,299 @@
+  @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&family=Sacramento&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Indie Flower', cursive;
+}
+:root{
+    --primary:#102C57;
+    --secondary:#EEEDED;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+}
+.container{
+    width: 60%;
+    max-height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: inset black 0px 0px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+.header{
+    padding: 15px;
+    width: 100%;
+}
+.header h1{
+    font-size: 40px;
+    padding-bottom: 10;;
+    color: var(--primary);
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: auto;
+    gap: 15px;
+}
+
+.list .task{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px 15px;
+    gap: 15px;
+    position: relative;
+}
+.list .task::before{
+    content: '';
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: inherit;
+    position: absolute;
+}
+.list .task .task-title{
+    display: flex;
+    justify-content: space-between;
+}
+.list .task .task-title p{
+    font-size: 28px;
+    text-transform:capitalize;
+}
+.list .task .task-title ul{
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+    list-style: none;
+}
+.list .task .task-title ul li{
+    width: 32px;
+    height: 32px;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list .task .task-details{
+    overflow: auto;
+}
+.list .task .task-details .details{
+    display: flex;
+    gap:15px;
+    align-items: center;
+    cursor: pointer;
+}
+.list .task .task-details .details p{
+    font-size: 22px;
+}
+.list .task .task-details .details i{
+    font-size: 14px;
+}
+.list .task .task-details .details-content{
+    height: 0;
+    overflow: hidden;
+    transition:0.3s;
+}
+.grow{
+    height: 75px !important;
+    padding: 10px;
+}
+div.list::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  div.list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  div.list::-webkit-scrollbar-thumb {
+    background: var(--primary);
+  }
+.plusBtn{
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    right: 15px;
+    top: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-board{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(160, 160, 160, 0.4);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-board form{
+    width: 50%;
+    max-height:70%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.input-board form input{
+    outline-color:var(--primary) ;
+    font-size: 24px;
+    width: 100%;
+    padding: 6px;
+}
+.input-board form textarea{
+    outline-color:var(--primary) ;
+    font-size: 24px;
+    width: 100%;
+}
+.input-board form button{
+    background-color:var(--primary) ;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+
+.edit-board{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(160, 160, 160, 0.4);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit-board form{
+    width: 50%;
+    max-height:70%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.edit-board form input{
+    outline-color:var(--primary) ;
+    font-size: 24px;
+    width: 100%;
+    padding: 6px;
+}
+.edit-board form textarea{
+    outline-color:var(--primary) ;
+    font-size: 24px;
+    width: 100%;
+}
+.edit-board form button{
+    background-color:var(--primary) ;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+
+textarea#details-input::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+textarea#details-input::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+textarea#details-input::-webkit-scrollbar-thumb {
+    background: var(--primary);
+  }
+  .none{
+    display: none !important;
+  }
+  .lineThroughTitle{
+    text-decoration: line-through;
+  }
+  .stats{
+    position: absolute;
+    width: 230px;
+    height: 170px;
+    top: 20px;
+    right: -230px;
+    position: absolute;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .stat{
+    width: 70%;
+    height: 43.3px;
+    background-color: var(--primary);
+    padding:0px 5px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color:var(--secondary);
+    position: relative;
+  }
+  .stat::after{
+    content: '';
+    position: absolute;
+    border: 22px solid var(--primary);
+    top: 0;
+    right: -43.3px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+
+    
+  }
+  .numberContainer{
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+  }
